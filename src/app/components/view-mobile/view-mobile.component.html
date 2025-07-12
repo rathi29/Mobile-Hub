@@ -1,0 +1,16 @@
+<div class="card-viewer-container">
+    <div class="card2" *ngFor="let i of viewMobile; index as id">
+      <img class="mobile-img2" src="{{i.imageUrl}}" alt="mobile-img">
+      <div class="card-body2">
+        <h5 class="mobile-name2">{{i.model}}</h5>
+        <p class="mobile-description2">{{i.description}}</p>
+        <p class="mobile-price2">Rs.{{i.price}}</p>
+        <p class="mobile-price2">Quantity: {{i.quantity}}</p>
+      </div>
+      <button (click)="editMobile(i)">Edit</button>
+      <button (click)="deleteMobile(i.mobileId)">Delete</button>
+    </div>
+  </div>
+  
+  
+

@@ -1,0 +1,32 @@
+
+
+
+<table>
+    <tr>
+      <th>Order No.</th>
+      <th>Customer Name</th>
+      <th>Model</th>
+      <th>Address</th>
+      <th>Quantity</th>
+      <th>Details</th>
+    </tr>
+    <tr *ngFor="let o of orders; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ o.customer.customerName }}</td>
+      <td>
+        <ng-container *ngFor="let m of o.mobiles">
+        {{ m.model }} <br>
+        </ng-container>
+      </td>
+      <td>{{ o.customer.address }}</td>
+      <td>
+        
+            {{ o.quantity }} <br>
+          
+      </td>
+      <td>
+        {{o.orderPrice}}
+      </td>
+    </tr>
+  </table>  
+  

@@ -1,0 +1,32 @@
+
+   <body>
+     <div class="container">
+       <form class="glass-login-form" (ngSubmit)="addMobile()" [formGroup]="mobileForm">
+         <div class="input-group">
+            <label for="model">Model:</label>
+            <input type="text" name="model" formControlName="model">
+         </div>
+         <div class="input-group">
+            <label for="brand">Brand:</label>
+            <input type="text" name="brand" formControlName="brand">
+         </div>
+         <div class="input-group">
+            <label for="price">Price:</label>
+            <input type="text" name="price" formControlName="price">
+         </div>
+         <div class="input-group">
+            <label for="image">Description:</label>
+            <input type="text" name="description" formControlName="description">
+         </div>
+         <div class="input-group">
+            <label for="image">ImageUrl:</label>
+            <input type="text" name="image" formControlName="imageUrl">
+         </div>
+         <div class="input-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" formControlName="quantity">
+         </div>
+         <button type="submit" [disabled]="mobileForm.invalid">Add Mobile</button>
+       </form>
+     </div>
+   </body>

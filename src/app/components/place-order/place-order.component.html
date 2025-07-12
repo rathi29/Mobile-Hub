@@ -1,0 +1,39 @@
+
+ 
+<div class="container">
+  <form class="glass-login-form" [formGroup]="confirmForm" (ngSubmit)="makePayment()">
+    <h2>Confirm Order</h2>
+    <div class="input-group">
+      <label for ="customerName">Name:</label>
+      <div class="input-with-icon">
+        <input type="text" name="customername" formControlName="customerName" [value]="customer.customerName">
+      </div>
+    </div>
+    <div class="input-group">
+      <label for ="address">Address:</label>
+      <div class="input-with-icon">
+        <input type="text" name="address" formControlName="address" [value]="customer.address">
+      </div>
+    </div>
+    <div class="input-group">
+          <label for ="TotalPrice">Total Price: </label>
+          <span>{{totalPrice}}</span>
+    </div>
+    <button type="submit">Make Payment</button>
+  </form>
+</div>
+
+<div *ngIf="delivery">
+  <div>
+      <div class="row">
+          <div class="col-12">
+              <img src="../../../assets/delivery-scooter.gif" class="move-image" alt="Moving Image" style="width: 7rem; margin-top: -0.5rem;">
+          </div>
+      </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

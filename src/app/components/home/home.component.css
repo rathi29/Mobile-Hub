@@ -1,0 +1,185 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #d3fce7;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 495px;
+    background-color: #d3fce7;
+    padding: 50px;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.text-content .btn {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: 370px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.top-brands-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.top-brands-section .container {
+    text-align: center;
+}
+
+.top-brands-section h1 {
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes moveLogo {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100% + 100px)); } /* Adjusted to move the width of the card plus the gap */
+}
+ 
+.card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: moveLogo 5s linear infinite; /* Applied animation here */
+}
+ 
+.card img {
+    width: 60%;
+    height: auto;
+    position: relative; /* Added to make the animation work */
+}
+
+.why-choose-us {
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+.why-choose-us h2 {
+    font-size: 2em;
+    color:#49c484;
+}
+ 
+.w-cards {
+    display: -webkit-inline-flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+ 
+.w-card {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px;
+    padding: 20px;
+    min-width: 2px;
+    max-width: 259px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+ 
+.w-card-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+ 
+.w-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+ 
+.w-card p {
+    font-size: 1em;
+    color: #666;
+}
+ 
+.w-card:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+ 
+.w-card:hover {
+    transform: translateY(-30px);
+}
+ 
+.w-cards-container .w-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+}
+ 
+.cards-container .w-card:hover {
+    transform: rotateY(180deg);
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+.cards-container .w-card {
+    animation: pulse 1.5s infinite;
+}
+
+/* Footer styles */ .footer { background-color: #333; color: white; padding: 20px 0; } .footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; } .footer .footer-content { display: flex; justify-content: space-between; width: 100%; } .footer .footer-content .footer-section { flex: 1; padding: 20px; } .footer .footer-content .footer-section h5 { margin-bottom: 20px; font-size: 1.2rem; color: #49c484; } .footer .footer-content .footer-section a { color: white; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; } .footer .footer-content .footer-section a:hover { color: #49c484; } .footer .footer-bottom { text-align: center; padding: 10px; font-size: 0.9rem; border-top: 1px solid #ccc; }

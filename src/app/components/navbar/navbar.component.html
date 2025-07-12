@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivo Fashion</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing page Navbar -->
+    <nav *ngIf="!isLoggedIn" class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" routerLink='/home'>Mobile Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/home'>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/registration'>Register</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/login'>Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- Customer page Navbar -->
+ 
+    <nav *ngIf="isLoggedIn && isCustomer" class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" routerLink='/home'>Mobile Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customerViewMobile">View Mobiles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/mycart">My Cart</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/myorder">My Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/viewReview">View Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- Admin page Navbar -->
+ 
+    <nav *ngIf="isLoggedIn && isAdmin" class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" routerLink='/home'>Mobile Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/viewmobile">View Mobile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/addMobile">Add Mobile</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/viewOrder">View Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/viewReview">View Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+ 

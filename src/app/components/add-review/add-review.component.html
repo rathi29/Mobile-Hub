@@ -1,0 +1,51 @@
+
+
+<div class="registration-container">
+    <div class="form-container card">
+        <h3>Add Review Details</h3>
+            <form [formGroup]="reviewForm" (ngSubmit)="addReview()">
+                <div class="form-group">
+                    <label for="subject">Mobile model:</label>
+                    <select name="subject" formControlName="subject">
+                        <option value="" disabled>Select a model</option>
+                        <option *ngFor="let m of mobile" value={{m.model}}>{{m.model}}</option>
+                    </select>
+                    <div *ngIf="reviewForm.get('subject').invalid && (reviewForm.get('subject').dirty || reviewForm.get('subject').touched)" class="error">
+                        <div *ngIf="reviewForm.get('subject').errors?.required">
+                            <span class="error-message">Please select a model.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="body">Feedback comments:</label>
+                    <textarea name="body" formControlName="body"></textarea>
+                    <div *ngIf="reviewForm.get('body').invalid && (reviewForm.get('body').dirty || reviewForm.get('body').touched)" class="error">
+                        <div *ngIf="reviewForm.get('body').errors?.required">
+                            <span class="error-message">Please enter feedback.</span>
+                        </div>
+                        <div *ngIf="reviewForm.get('body').errors?.minlength">
+                            <span class="error-message">Feedback must be atleast 10 characters long.</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <div class="rating-container">
+                        <p *ngFor="let rating of [1,2,3,4,5]">
+                            <input type="radio" name="rating" formControlName="rating" [value]="rating"/> {{rating}}
+                        </p>
+                    </div>
+                    <div *ngIf="reviewForm.get('rating').invalid && (reviewForm.get('rating').dirty || reviewForm.get('rating').touched)" class="error">
+                        <div *ngIf="reviewForm.get('rating').errors?.required">
+                            <span class="error-message">Please select a rating.</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <button type="submit">Submit</button>
+            </form>
+    </div>
+</div>
+

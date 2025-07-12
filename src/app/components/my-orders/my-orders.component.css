@@ -1,0 +1,91 @@
+/* .h2{
+  background-color: #f36c21;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+  margin-top: 20px;
+} */
+ 
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+ 
+.nav-link {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+ 
+.nav-link:hover, .nav-link.active {
+    background-color: #3eb489;
+    border-radius: 5px;
+}
+ 
+.content {
+    padding: 20px;
+}
+ 
+h2 {
+    text-align: center;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: slideDown 1s ease-in-out;
+    margin-top: 20px;
+}
+ 
+table {
+    width: 100%;
+    border:outset;
+    margin-top: 50px;
+    box-shadow: 0 0 10px black(0, 0, 0, 0.1);
+    background-color:d3fce7;
+}
+ 
+th, td {
+    border: 3px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+ 
+th {
+    background-color:#8ae5b6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+ 
+img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+ 
+ 
+button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #8ae5b6; /* Green color */
+  color: #ffffff; /* White text color */
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute; /* Positioning */
+  top: 30px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+ 
+button:hover {
+  background: #28a866; /* Darker green on hover */
+}
+ 
+.container {
+  position: relative; /* Ensure container can position children absolutely */
+}

@@ -1,0 +1,51 @@
+<h2>My Orders</h2>
+<div class="container">
+    <h2 class="title">My Orders</h2>
+ 
+    <div class="table-container">
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th scope="col">Order Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Mobiles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let o of orders2">
+                    <td>
+                        Rs.{{o.orderPrice}}
+                    </td>
+                    <td>
+                        {{o.quantity}}
+                    </td>
+                    <td>
+                        <table class="mobile-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Model</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                       
+                        <tbody >
+                           
+                            <tr *ngFor="let item of o.mobiles">
+                                <td><img src="{{item.imageUrl}}" width="50" class="img-responsive" alt="Mobile Image"></td>
+                                <td>{{item.model}}</td>
+                                <td>{{item.description}}</td>
+                                <td>Rs.{{item.price}}</td>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+<button (click)="addReview()">Add Review</button>
+</div>

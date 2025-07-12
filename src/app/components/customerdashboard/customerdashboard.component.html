@@ -1,0 +1,31 @@
+<div class="customer-registration-container">
+  <div class="customer-registration-form card">
+    <div *ngIf="!isFirstLogin">
+      <form (ngSubmit)="registerCustomer()" [formGroup]="CustomerRegistration">
+        <h1>Fill Your Details</h1>
+
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" id="customer_name" formControlName="customerName" placeholder="Name">
+        </div>
+
+        <div class="input-group">
+          <i class="fa fa-address-card"></i>
+          <input type="text" id="address" formControlName="address" placeholder="Address">
+        </div>
+
+        <button type="submit" [disabled]="!CustomerRegistration.valid">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+`
+<div class="welcome-msg" *ngIf="isFirstLogin">
+    <p data-shadow='Hello, Welcome to Mobile Hub!'>Hello, Welcome to Mobile Hub!</p>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<body>
+  <div class="container">
+    <form class="glass-login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <h2>Login</h2>
+      <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-user"></i>
+          <input type="text" name="username" formControlName="username" placeholder="Username">
+        </div>
+        <div *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched">
+          <span class="error-message">Username is Required</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-lock"></i>
+          <input type="password" name="password" formControlName="password" placeholder="Password">
+        </div>
+        <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+          <span class="error-message">Password is Required</span>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a routerLink='/registration'>Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+
+<section class="how-works">
+  <h3>How Mobile Hub Works</h3>
+  <div class="row">
+      <div class="col-md-4 step">
+          <img src="../assets/check-price.webp" alt="Check Price">
+          <h3>1. Check Price</h3>
+          <p>Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.</p>
+      </div>
+      <div class="col-md-4 step">
+          <img src="../assets/schedule-pickup.webp" alt="Schedule Pickup">
+          <h3>2. Schedule Pickup</h3>
+          <p>Book a free pickup from your home or work at a time slot that best suits your convenience.</p>
+      </div>
+      <div class="col-md-4 step">
+          <img src="../assets/get-paid.webp" alt="Get Paid">
+          <h3>3. Get Paid</h3>
+          <p>Did we mention you get paid as soon as our executive picks up your device? It's instant payment all the way!</p>
+      </div>
+  </div>
+</section>
+

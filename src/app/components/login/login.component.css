@@ -1,0 +1,148 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  background-color: #ffffff; /* White background color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.glass-login-form {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-with-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 10px 10px 10px 30px; /* Adjust padding to make room for icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+}
+
+.input-with-icon input::placeholder {
+  color: #aaa;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #d3fce7;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+}
+
+/* button:disabled {
+  background-color: #d3fce7;
+  cursor: not-allowed;
+} */
+
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #79fab7;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.register-link p {
+  color: #333;
+}
+
+.how-works {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #d3fce7;
+  padding: 20px;
+}
+.step {
+  margin-top: 30px;
+}
+.step img {
+  width: 70px;
+  height: 70px;
+}
+.step h3 {
+  margin-top: 20px;
+}
+.step p {
+  color: #666;
+}

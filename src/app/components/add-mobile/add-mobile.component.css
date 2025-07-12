@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(45deg, #ffffff, #d6f9e7); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 3rem;
+}
+
+.container {
+  margin-top: 100px;
+  width: 75%;
+  max-width: 490px;
+}
+
+.glass-login-form {
+  background: #d6f9e7;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  margin-top: -70px;
+  margin-bottom: 30px;
+}
+
+.glass-login-form h5 {
+  text-align: center;
+  color: #000000;
+}
+
+.input-group {
+  margin: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+::placeholder {
+  color: #c0c0c0;
+}
+
+.input-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-right: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #eaf7f0;
+  backdrop-filter: blur(11px);
+  color: #000000;
+}
+
+.input-group input:focus {
+  outline: none;
+  background: white;
+}
+.input-group select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-right: 40px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(245, 240, 240, 0.15);
+  backdrop-filter: blur(11px);
+  color: #000000;
+}
+
+.input-group select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  margin: 10px;
+  width: 93%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #8ae5b6, #b3fed7);
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(45deg,  #b3fed7, #67dea0);
+}
+
+.error-message {
+  color: #FF0000;
+  font-size: 14px;
+}

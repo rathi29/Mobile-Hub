@@ -1,0 +1,19 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: visible;
+}
+.navbar{
+    background-color: #d3fce7;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: black;
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: black;
+    padding: 0.5rem 1rem;
+}
+.navbar-custom{
+    background-color: #d3fce7;
+}

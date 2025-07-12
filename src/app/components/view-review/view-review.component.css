@@ -1,0 +1,29 @@
+
+  
+  .review-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.rating {
+    color: #FFD700; /* Gold color for stars */
+}
+
+.review-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.rating {
+  color: #FFD700; /* Gold color for stars */
+}
+.filled-star {
+  color: #FFD700;
+}
+.empty-star {
+  color: #ccc;
+}

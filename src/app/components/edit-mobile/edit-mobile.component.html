@@ -1,0 +1,35 @@
+
+<div class="editMobile-container" *ngIf="editedMobile">
+  <div class="form-container card">
+        <div class="editMobile" >
+          <h1>Update Mobile</h1>
+
+    <form (ngSubmit)="saveMobile()" [formGroup]="mobileForm">
+        <label for="model">Model:</label>
+        <input type="text" name="model" formControlName="model" [(ngModel)]="editedMobile.model"><br>
+
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" formControlName="brand" [(ngModel)]="editedMobile.brand"><br>
+
+        <label for="image">ImageUrl:</label>
+        <input type="text" name="image" formControlName="imageUrl" [(ngModel)]="editedMobile.imageUrl"><br>
+
+        <label for="image">Description:</label>
+        <input type="text" name="description" formControlName="description" [(ngModel)]="editedMobile.description"> <br>
+
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" formControlName="quantity"   [(ngModel)]= "editedMobile.quantity"> <br>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" formControlName="price" [(ngModel)]="editedMobile.price"> <br>
+
+        <button type="submit">Update Mobile </button>
+        <button  type="button" (click)="cancel()">Cancel</button> 
+         
+    </form>
+
+</div>  
+    </div>
+</div>
+

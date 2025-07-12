@@ -1,0 +1,104 @@
+<body class="body">
+  <div class="container">
+    <form class="glass-login-form" [formGroup]="registrationForm" (ngSubmit)="register()">
+      <h2>Register</h2>
+      
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-user"></i>
+          <input type="text" name="username" formControlName="username" placeholder="Username">
+        </div>
+        <div *ngIf="registrationForm.get('username').hasError('required') && registrationForm.get('username').touched">
+          <span class="error-message">Username is required</span>
+        </div>
+        <div *ngIf="registrationForm.get('username').hasError('minlength') && registrationForm.get('username').touched">
+          <span class="error-message">Minimum length of Username is 6</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-envelope"></i>
+          <input type="email" name="email" formControlName="email" placeholder="Email">
+        </div>
+        <div *ngIf="registrationForm.get('email').hasError('required') && registrationForm.get('email').touched">
+          <span class="error-message">Email is required</span>
+        </div>
+        <div *ngIf="registrationForm.get('email').hasError('email') && registrationForm.get('email').dirty">
+          <span class="error-message">Enter a valid email address</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-lock"></i>
+          <input type="password" name="password" formControlName="password" placeholder="Password">
+        </div>
+        <div *ngIf="registrationForm.get('password').hasError('required') && registrationForm.get('password').touched">
+          <span class="error-message">Password is required</span>
+        </div>
+        <div *ngIf="registrationForm.get('password').hasError('pattern') && registrationForm.get('password').dirty">
+          <span class="error-message">Password should contain a small letter, a capital letter, a digit, and a special character. Minimum length is 6.</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-lock"></i>
+          <input type="password" name="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+        </div>
+        <div *ngIf="registrationForm.get('confirmPassword').hasError('required') && registrationForm.get('confirmPassword').touched">
+          <span class="error-message">Confirm Password is required</span>
+        </div>
+        <div *ngIf="registrationForm.get('confirmPassword').value !== registrationForm.get('password').value && registrationForm.get('confirmPassword').dirty">
+          <span class="error-message">Passwords do not match</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-phone"></i>
+          <input type="text" name="mobileNumber" formControlName="mobileNumber" placeholder="Mobile Number">
+        </div>
+        <div *ngIf="registrationForm.get('mobileNumber').hasError('required') && registrationForm.get('mobileNumber').touched">
+          <span class="error-message">Mobile Number is required</span>
+        </div>
+        <div *ngIf="registrationForm.get('mobileNumber').hasError('pattern') && registrationForm.get('mobileNumber').dirty">
+          <span class="error-message">Mobile Number should be 10 digits long and contain only digits</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-with-icon">
+          <i class="fa fa-user"></i>
+          <select name="role" formControlName="role">
+            <option value="ADMIN">ADMIN</option>
+            <option value="CUSTOMER">CUSTOMER</option>
+          </select>
+        </div>
+        <div *ngIf="registrationForm.get('role').invalid && (registrationForm.get('role').dirty || registrationForm.get('role').touched)" class="error">
+          <div *ngIf="registrationForm.get('role').errors?.required">
+            <span class="error-message">Please select a role.</span>
+          </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="(!registrationForm.valid && registrationForm.get('confirmPassword').value !== registrationForm.get('password').value)">Register</button>
+    </form>
+  </div>
+</body>
+
+<section class="how-works">
+  <h3>How Mobile Hub Works</h3>
+  <div class="row">
+      <div class="col-md-4 step">
+          <img src="../assets/check-price.webp" alt="Check Price">
+          <h3>1. Check Price</h3>
+          <p>Select your device & tell us about its current condition, and our advanced AI tech will tailor make the perfect price for you.</p>
+      </div>
+      <div class="col-md-4 step">
+          <img src="../assets/schedule-pickup.webp" alt="Schedule Pickup">
+          <h3>2. Schedule Pickup</h3>
+          <p>Book a free pickup from your home or work at a time slot that best suits your convenience.</p>
+      </div>
+      <div class="col-md-4 step">
+          <img src="../assets/get-paid.webp" alt="Get Paid">
+          <h3>3. Get Paid</h3>
+          <p>Did we mention you get paid as soon as our executive picks up your device? It's instant payment all the way!</p>
+      </div>
+  </div>
+</section>

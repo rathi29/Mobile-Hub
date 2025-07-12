@@ -1,0 +1,34 @@
+<div class="card-viewer-container">
+  <div class="card" *ngFor="let i of mobiles; index as ind">
+    <img class="mobile-img" src="{{i.imageUrl}}" alt="mobile-img">
+    <div class="card-body">
+      <div class="remove">
+        <h5 class="mobile-name">{{i.model}}</h5>
+        <button style="size: 40;" class="remove-button" (click)="removeMobileFromCart(i.mobileId)"><i class="fa fa-trash"></i></button>
+      </div>
+     
+      <p class="mobile-description">{{i.description}}</p><br>
+      <p class="mobile-price">{{i.price}}</p><br>
+      <p class="mobile-price">{{i.quantity}}</p><br>
+      <div class="quantity-container">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" [(ngModel)]="quantities[ind]" [max]="i.quantity" min="1">
+      </div>
+      <div *ngIf="quantities[ind]>i.quantity" >
+        Quantity Exceeds
+      </div>
+    </div>
+    <div *ngIf="flag">
+      <p>No item added to cart.</p>
+    </div>
+</div>
+<div *ngIf="mobiles.length!==0">
+  <button class="place-order" (click)="placeOrder()">Place Order</button>
+</div>
+<div *ngIf=" mobiles.length === 0" class="empty-cart-container">
+  <img class="empty-cart-img" src="assets/emptycart.jpeg" alt="Empty Cart Image">
+  <h1>Your cart is empty</h1>
+  <p>Looks like you have not added anything to your cart. Go ahead & explore top brands</p>
+  <a routerLink="/customerViewMobile">Continue Shopping</a>
+</div>
+</div>

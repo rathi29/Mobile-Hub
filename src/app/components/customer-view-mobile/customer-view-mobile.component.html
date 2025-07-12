@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Mobile Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+       <div id="captioned-gallery" style="margin-top: 1rem">
+        <figure class="slider">
+         
+          <figure>
+            <img src="../../../assets/carousel-banner-1.jpg" class="imgsrc" style="max-width: 100%; height: auto;"/>
+          </figure>
+         
+          <figure>
+            <img src="../../../assets/carousel-banner-2.avif" class="imgsrc" style="max-width: 100%;height: fit-content;margin-top: 4rem;"/>
+          </figure>
+         
+          <figure>
+            <img src="../../../assets/imgs.jpg" class="imgsrc" style="max-width: 100%;height: fit-content;"/>
+          </figure>       
+        </figure>
+      </div>
+ 
+    <!-- Search Bar Section -->
+    <div class="search-bar-container">
+        <input type="text" [(ngModel)]="searchText" placeholder="Search mobiles">
+    </div>
+ 
+    <!-- Mobile Cards Section -->
+    <div class="card-viewer-container">
+        <div class="card2" *ngFor="let i of viewMobile | searchFilter:searchText">
+            <img class="mobile-img2" src="{{i.imageUrl}}" alt="mobile-img">
+            <div class="card-body2">
+                <h5 class="mobile-name2">{{i.model}}</h5>
+                <p class="mobile-description2">{{i.description}}</p>
+                <p class="mobile-price2">Rs.{{i.price}}</p>
+                <button (click)="addToCart(i)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 3000,
+            pause: "hover"
+        });
+    </script>
+</body>
+</html>

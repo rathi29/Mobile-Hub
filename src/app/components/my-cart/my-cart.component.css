@@ -1,0 +1,146 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+ 
+.card-viewer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 5rem;
+}
+ 
+.card {
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 100%;
+  max-width: 600px;
+  max-height: 200px;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+ 
+.mobile-img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+ 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+ 
+.mobile-name, .mobile-description, .mobile-price{
+  font-size: 1em;
+  /* margin: 5px 0; */
+  margin: 0px;
+  line-height: 0px;
+}
+ 
+.mobile-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+ 
+.quantity-container{
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  margin-top: -0.5rem;
+}
+ 
+.quantity-container label{
+  margin-right: 10px;
+}
+ 
+button {
+  background-color: #d3fce7;
+  border: none;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+  padding: 10px;
+}
+ 
+button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.place-order {
+  margin-top: 50px;
+}
+ 
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column;
+      align-items: center;
+      max-height: none;
+  }
+ 
+  .mobile-img {
+      margin: 0 0 20px 0;
+  }
+ 
+  .card-body {
+      align-items: center;
+      text-align: center;
+  }
+ 
+  .quantity-container{
+    align-items: center;
+    justify-content: center;
+  }
+}
+.remove-button{
+  width: fit-content;
+  border: 1px solid black;
+  margin-left: 200px;
+  margin-top: -10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.remove{
+  display: flex;
+}
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.empty-cart-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+ 
+.empty-cart-message {
+  font-size: 1.2em;
+  color: #666;
+}
+ 
